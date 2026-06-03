@@ -4,3 +4,14 @@ server:
 spring:
   application:
     name: shopDog
+  profiles:
+    include: local   # 自动叠加 application-local.yml(存放真实密钥,已 gitignore)
+
+# 微信小程序凭证:此处仅占位,真实值放 application-local.yml,切勿提交真值到 git
+wx:
+  appid: YOUR_APPID
+  secret: YOUR_APPSECRET
+
+# JWT 签名密钥:HS256 要求至少 32 字节,生产环境应外置且更换
+jwt:
+  secret: shopdog-demo-jwt-secret-please-change-0123456789abcdef

@@ -36,3 +36,6 @@ build/
 
 ### Log ###
 *.log
+
+### Local secrets(真实 AppSecret 等,永不提交) ###
+application-local.yml
