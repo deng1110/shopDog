@@ -15,3 +15,14 @@ wx:
 # JWT 签名密钥:HS256 要求至少 32 字节,生产环境应外置且更换
 jwt:
   secret: shopdog-demo-jwt-secret-please-change-0123456789abcdef
+
+# 日志:额外写到 jar 运行目录下的 logs/app.log(同时仍打印到控制台)
+logging:
+  file:
+    name: logs/app.log
+  level:
+    com.shopdog: info
+  logback:
+    rollingpolicy:
+      max-file-size: 10MB   # 单文件超过则滚动
+      max-history: 7        # 最多保留 7 个历史文件,防止撑满磁盘
